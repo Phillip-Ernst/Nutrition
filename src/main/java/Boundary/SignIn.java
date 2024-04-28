@@ -68,12 +68,13 @@ public class SignIn {
         TextField passwdConfirmation = new TextField();
         Button createUserBtn = new Button("Create User");
         backBtn = new Button("Back to Sign in Page");
+        Label status2 = new Label("Enter your username and password above");
         addUsrNamefield.setPromptText("Username:");
         addPasswdField.setPromptText("Password:");
         passwdConfirmation.setPromptText("Confirm Password:");
         addUserHbox.getChildren().addAll(addPasswdField, passwdConfirmation);
         addUserPane.add(addUsrNamefield,1,0);
-        addUserPane.add(status,1,2);
+        addUserPane.add(status2,1,2);
         addUserPane.add(backBtn,0,3);
         addUserPane.add(createUserBtn,2,3);
 
@@ -86,12 +87,12 @@ public class SignIn {
                         userinterface.switchMenuPane(user);
                     }
                     else {
-                        status.setText("Could not load User data");
+                        status.setText("This does not match any current username/passwords, please try again.");
                     }
 
                 }
                 catch (SQLException e1) {
-                    status.setText("Wrong username or password");
+                    status.setText("Could not load user data");
                     throw new RuntimeException(e1);
                 }
             }
@@ -106,18 +107,18 @@ public class SignIn {
             if(addPasswdField.getText().equals(passwdConfirmation.getText())) {
                 if (inputValidation.UsernamePasswordValidation(addUsrNamefield.getText(), addPasswdField.getText())) {
                         if(foodDatabaseManagement.addUser(addUsrNamefield.getText(), addPasswdField.getText())) {
-                            status.setText(addUsrNamefield.getText()+" was added");
+                            status2.setText(addUsrNamefield.getText()+" was added");
                         }
                         else {
-                            status.setText("Could not add user...");
+                            status2.setText("Could not add user...");
                         }
                 }
                 else {
-                    status.setText("Don't use these characters: ', \", ;, `, -, _, (), [], *, =, /, \\, %, >, <, $, &, |");
+                    status2.setText("Don't use these characters: ', \", ;, `, -, _, (), [], *, =, /, \\, %, >, <, $, &, |");
                 }
             }
             else {
-                status.setText("Both password fields need to match!");
+                status2.setText("Both password fields need to match!");
             }
 
         });
