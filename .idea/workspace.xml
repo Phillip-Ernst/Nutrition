@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="c87e1feb-53e6-4a84-95ee-32be7768a31a" name="Changes" comment="Fix bug #1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Boundary/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Boundary/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Control/CalculateCalories.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Control/CalculateCalories.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Control/CalculateCaloriesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Control/CalculateCaloriesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Control/InputValidationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Control/InputValidationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +74,9 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.SignIn.executor": "Run",
     "Application.Unnamed.executor": "Run",
-    "Application.UserInterface.executor": "Run",
+    "Application.UserInterface.executor": "Coverage",
+    "JUnit.CalculateCaloriesTest.executor": "Run",
+    "JUnit.Unnamed.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -83,7 +89,7 @@
     "settings.editor.selected.configurable": "project.propVCSSupport.Issue.Navigation"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.CalculateCaloriesTest">
     <configuration name="UserInterface" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Boundary.UserInterface" />
       <module name="Nutrition" />
@@ -91,6 +97,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CalculateCaloriesTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="Nutrition" />
+      <option name="PACKAGE_NAME" value="Control" />
+      <option name="MAIN_CLASS_NAME" value="Control.CalculateCaloriesTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.UserInterface" />
+      <item itemvalue="JUnit.CalculateCaloriesTest" />
+    </list>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -356,7 +376,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714337531232</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Fix bug #1">
+      <option name="closed" value="true" />
+      <created>1714338239638</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1714338239638</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -376,5 +404,8 @@
     <MESSAGE value="commit" />
     <MESSAGE value="Fix bug #1" />
     <option name="LAST_COMMIT_MESSAGE" value="Fix bug #1" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Nutrition$UserInterface.ic" NAME="UserInterface Coverage Results" MODIFIED="1714341559025" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
