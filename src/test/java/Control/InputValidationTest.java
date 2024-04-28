@@ -1,14 +1,14 @@
 package Control;
 
 import static org.junit.Assert.*;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.Before;
 import org.junit.Test;
 
 public class InputValidationTest {
 
     private InputValidation validator;
 
-    @BeforeEach
+    @Before
     public void setUp() {
         validator = new InputValidation();
     }
