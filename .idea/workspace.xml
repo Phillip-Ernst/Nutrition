@@ -6,9 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c87e1feb-53e6-4a84-95ee-32be7768a31a" name="Changes" comment="commit">
       <change afterPath="$PROJECT_DIR$/src/test/java/Control/CalculateCaloriesTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Control/InputValidationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Boundary/FoodDatabaseManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Boundary/FoodDatabaseManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Control/InputValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Control/InputValidation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,10 +97,42 @@
       <recent name="Control" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.InputValidationTest.testUsernamePasswordValidation_InvalidPassword">
+  <component name="RunManager" selected="JUnit.CalculateCaloriesTest.testCalculatorTotalCal_EmptyList">
     <configuration name="UserInterface" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Boundary.UserInterface" />
       <module name="Nutrition" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalculateCaloriesTest.testCalculateTotalCal_NonEmptyList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Nutrition" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Control.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Control" />
+      <option name="MAIN_CLASS_NAME" value="Control.CalculateCaloriesTest" />
+      <option name="METHOD_NAME" value="testCalculateTotalCal_NonEmptyList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalculateCaloriesTest.testCalculateTotalMacronutrientGrams_NonEmptyList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Nutrition" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Control.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Control" />
+      <option name="MAIN_CLASS_NAME" value="Control.CalculateCaloriesTest" />
+      <option name="METHOD_NAME" value="testCalculateTotalMacronutrientGrams_NonEmptyList" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -120,7 +153,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InputValidationTest.testUsernamePasswordValidation_InvalidPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InputValidationTest.testUsernamePasswordValidation_InvalidUsername" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Nutrition" />
       <extension name="coverage">
         <pattern>
@@ -130,7 +163,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="Control" />
       <option name="MAIN_CLASS_NAME" value="Control.InputValidationTest" />
-      <option name="METHOD_NAME" value="testUsernamePasswordValidation_InvalidPassword" />
+      <option name="METHOD_NAME" value="testUsernamePasswordValidation_InvalidUsername" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InputValidationTest.testUsernamePasswordValidation_ValidInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Nutrition" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Control.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Control" />
+      <option name="MAIN_CLASS_NAME" value="Control.InputValidationTest" />
+      <option name="METHOD_NAME" value="testUsernamePasswordValidation_ValidInput" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -138,8 +187,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.InputValidationTest.testUsernamePasswordValidation_InvalidPassword" />
         <item itemvalue="JUnit.CalculateCaloriesTest.testCalculatorTotalCal_EmptyList" />
+        <item itemvalue="JUnit.CalculateCaloriesTest.testCalculateTotalMacronutrientGrams_NonEmptyList" />
+        <item itemvalue="JUnit.CalculateCaloriesTest.testCalculateTotalCal_NonEmptyList" />
+        <item itemvalue="JUnit.InputValidationTest.testUsernamePasswordValidation_InvalidUsername" />
+        <item itemvalue="JUnit.InputValidationTest.testUsernamePasswordValidation_ValidInput" />
       </list>
     </recent_temporary>
   </component>
@@ -391,7 +443,14 @@
       <option name="project" value="LOCAL" />
       <updated>1714153463175</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="commit">
+      <created>1714325024401</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1714325024401</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
