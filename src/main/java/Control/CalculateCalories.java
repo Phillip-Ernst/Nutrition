@@ -68,7 +68,7 @@ public class CalculateCalories {
         //Calculate the calories from each macronutrient
         double proteinCal = protein * 4;
         double carbCal = carb * 4;
-        double fatCal = fat * 9;
+        double fatCal = fat * 4;
 
         calArray.add(proteinCal);
         calArray.add(carbCal);

@@ -38,8 +38,8 @@ class CalculateCaloriesTest {
 
     @Test
     public void testCalculateTotalMacronutrientGrams_NonEmptyList() {
-        foodList.add(new Food("Apple", 95, 0.3, 25, 0.5));
-        foodList.add(new Food("Banana", 105, 0.4, 27, 1.3));
+        foodList.add(new Food("Apple", 95, 0.5, 25, 0.3));
+        foodList.add(new Food("Banana", 105, 1.3, 27, 0.4));
         ArrayList<Double> expected = new ArrayList<>();
         expected.add(1.8);  // Total proteins
         expected.add(52.0); // Total carbs
@@ -57,8 +57,8 @@ class CalculateCaloriesTest {
 
     @Test
     public void testCalculateTotalMacronutrientCals_NonEmptyList() {
-        foodList.add(new Food("Apple", 95, 0.3, 25, 0.5));
-        foodList.add(new Food("Banana", 105, 0.4, 27, 1.3));
+        foodList.add(new Food("Apple", 95, 0.5, 25, 0.3));
+        foodList.add(new Food("Banana", 105, 1.3, 27, 0.4));
         ArrayList<Double> expected = new ArrayList<>();
         expected.add(7.2);   // Calories from protein (1.8 * 4)
         expected.add(208.0); // Calories from carbs (52.0 * 4)
