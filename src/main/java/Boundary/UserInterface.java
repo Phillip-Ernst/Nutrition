@@ -96,6 +96,11 @@ public class UserInterface extends Application {
         scene.setRoot(menuPane);
     }
 
+    /**
+     * Updates pie graph when called.
+     * @param gramOrCal String that lets the method know to make the graph in grams or calories (string should either be gram or calorie)
+     * @param dailyOrWeekly String that lets the method know to use daily intake or weekly intake (string should either be daily or weekly)
+     */
     public void updateGraph(String gramOrCal, String dailyOrWeekly) {
         CalculateCalories calculateCalories = new CalculateCalories();
         GenerateGraph generateGraph = new GenerateGraph();
