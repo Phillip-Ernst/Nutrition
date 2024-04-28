@@ -2,7 +2,7 @@ package Control;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
-import org.junit.Before;
+import org.junit.jupiter.api.BeforeEach;
 import java.util.ArrayList;
 import Entity.Food;
 
@@ -10,7 +10,7 @@ import Entity.Food;
 class CalculateCaloriesTest {
     private CalculateCalories calculator;
     private ArrayList<Food> foodList;
-    @Before
+    @BeforeEach
     public void setUP() {
         calculator = new CalculateCalories();
         foodList = new ArrayList<>();
