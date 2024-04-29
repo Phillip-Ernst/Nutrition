@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c87e1feb-53e6-4a84-95ee-32be7768a31a" name="Changes" comment="commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Control/CalculateCalories.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Control/CalculateCalories.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +75,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Rebasing main",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Isaac/Downloads/gson-2.10.1.jar",
     "project.structure.last.edited": "Modules",
@@ -84,7 +84,7 @@
     "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.CalculateCaloriesTest">
+  <component name="RunManager" selected="JUnit.InputValidationTest">
     <configuration name="UserInterface" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Boundary.UserInterface" />
       <module name="Nutrition" />
@@ -102,8 +102,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="InputValidationTest" type="JUnit" factoryName="JUnit">
+      <module name="Nutrition" />
+      <option name="PACKAGE_NAME" value="Control" />
+      <option name="MAIN_CLASS_NAME" value="Control.InputValidationTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.UserInterface" />
+      <item itemvalue="JUnit.InputValidationTest" />
       <item itemvalue="JUnit.CalculateCaloriesTest" />
     </list>
   </component>
