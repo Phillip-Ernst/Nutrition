@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c87e1feb-53e6-4a84-95ee-32be7768a31a" name="Changes" comment="commit">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Control/InputValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Control/InputValidation.java" afterDir="false" />
-    </list>
+    <list default="true" id="c87e1feb-53e6-4a84-95ee-32be7768a31a" name="Changes" comment="Fix #2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -455,7 +453,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714354424807</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Fix #2">
+      <option name="closed" value="true" />
+      <created>1714355011275</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1714355011275</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -474,7 +480,8 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/Entity/User.java" />
     <MESSAGE value="Fix bug #1" />
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="Fix #2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix #2" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Nutrition$UserInterface.ic" NAME="UserInterface Coverage Results" MODIFIED="1714341559025" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
