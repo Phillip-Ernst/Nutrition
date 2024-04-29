@@ -55,14 +55,16 @@ public class InputValidation {
             for (char fc : food.toCharArray()) {
                 for (char bc : badFoodChars) {
                     //returns true if they are not equal (passed), returns false if they are equal (failed)
-                    return fc != bc;
+                    if (fc == bc) {
+                        return false;
+                    }
                 }
             }
+            return true;
         }
         else {
             //food name is too long; failed
             return false;
         }
-        return false;
     }
 }
