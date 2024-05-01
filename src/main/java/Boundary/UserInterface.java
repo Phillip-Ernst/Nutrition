@@ -33,11 +33,12 @@ public class UserInterface extends Application {
     private static Button reportBtn;
     private static Button graphSettingBtn;
     private static User currentUser;
+    private static GenerateGraph generateGraph;
     @Override
     public void start(Stage stage) throws IOException, ClassNotFoundException {
         SignIn signIn = new SignIn();
         LogFood logFood = new LogFood();
-        GenerateGraph generateGraph = new GenerateGraph();
+        generateGraph = new GenerateGraph();
         currentUser = new User("Empty");
 
         //Initially set pane to signInPane
@@ -63,7 +64,7 @@ public class UserInterface extends Application {
 
         //Sets the root to menuPane when backBtn in logFoodPane is clicked
         logFood.getBackBtn().setOnAction(e -> {
-            updateGraph("gram", "daily");
+            updateGraph("Grams    ", "Daily     ");
             scene.setRoot(menuPane);
         });
 
@@ -110,7 +111,7 @@ public class UserInterface extends Application {
      */
     public void switchMenuPane(User user) {
         currentUser = user;
-        updateGraph("gram","daily");
+        updateGraph("Grams    ","Daily     ");
         scene.setRoot(menuPane);
     }
 
@@ -121,7 +122,6 @@ public class UserInterface extends Application {
      */
     public void updateGraph(String gramOrCal, String dailyOrWeekly) {
         CalculateCalories calculateCalories = new CalculateCalories();
-        GenerateGraph generateGraph = new GenerateGraph();
 
         //Get total daily calories, proteins, carbs, and fats
         ArrayList<Double> dailyMacroGrams;
@@ -150,6 +150,7 @@ public class UserInterface extends Application {
             }
             else {
                 PieChart pieChart = generateGraph.generateGraphInGrams(weeklyMacroGrams.get(0), weeklyMacroGrams.get(1), weeklyMacroGrams.get(2));
+                pieChart.setTitle("Weekly Intake of Macronutrients in Grams");
                 pieChart.getData().forEach(data -> {
                     String label = (data.getPieValue() + " grams");
                     Tooltip toolTip = new Tooltip(label);
@@ -170,6 +171,7 @@ public class UserInterface extends Application {
             }
             else {
                 PieChart pieChart = generateGraph.generateGraphInCalories(weeklyMacroCals.get(0), weeklyMacroCals.get(1), weeklyMacroCals.get(2));
+                pieChart.setTitle("Weekly Intake of Macronutrients in Calories");
                 pieChart.getData().forEach(data -> {
                     String label = (data.getPieValue() + " calories");
                     Tooltip toolTip = new Tooltip(label);

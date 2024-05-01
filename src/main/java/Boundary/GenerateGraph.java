@@ -33,7 +33,7 @@ public class GenerateGraph {
     private  RadioButton calRadio;
     private  RadioButton dailyRadio;
     private  RadioButton weeklyRadio;
-    private Button saveBtn;
+    private static Button saveBtn;
 
     public GenerateGraph() {
         //Create stage and layout
