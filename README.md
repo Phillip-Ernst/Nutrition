@@ -1,8 +1,6 @@
 **-----WORK IN PROGRESS-----**
 - General UI Improvements
 - Generate Report Function
-- GenerateGraph UI
-    - For pie chart options
  
 **-----HOW TO GET THE DATABASE CONNECTED-----**
 - You need to download the JDBC driver
