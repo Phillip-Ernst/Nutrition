@@ -1,6 +1,5 @@
 **-----WORK IN PROGRESS-----**
 - General UI Improvements
-- Generate Report Function
  
 **-----HOW TO GET THE DATABASE CONNECTED-----**
 - You need to download the JDBC driver
