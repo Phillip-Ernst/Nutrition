@@ -2,10 +2,12 @@ package Boundary;
 
 import Control.InputValidation;
 import Entity.Food;
+import javafx.geometry.VPos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 
 import java.time.LocalDate;
@@ -16,7 +18,7 @@ import java.time.LocalDate;
  * This class alows the user to input their food intake
  */
 public class LogFood {
-    private BorderPane logFoodPane;
+    private GridPane logFoodPane;
     private Button backBtn;
 
     public LogFood() throws ClassNotFoundException {
@@ -25,19 +27,19 @@ public class LogFood {
         UserInterface userInterface = new UserInterface();
 
         //Create logFoodPane
-        logFoodPane = new BorderPane();
+        logFoodPane = new GridPane();
         HBox centerPane = new HBox();
-        logFoodPane.setCenter(centerPane);
+        logFoodPane.add(centerPane,1,1);
+        logFoodPane.setHgap(150);
 
         //Create and add nodes to logFoodPane
         backBtn = new Button("Back to Menu");
         Button enterBtn = new Button("Enter");
         TextField foodField = new TextField();
         Label status = new Label("Enter your food in the field above");
-        logFoodPane.setLeft(backBtn);
+        logFoodPane.add(backBtn,0,0);
         centerPane.getChildren().addAll(foodField, enterBtn);
-        logFoodPane.setBottom(status);
-
+        logFoodPane.add(status,1,2);
         //searches for the user's food in the food database then adds that food to the user's database
         enterBtn.setOnAction(e -> {
             if (inputValidation.foodInputValidation(foodField.getText())) {
@@ -69,7 +71,7 @@ public class LogFood {
     /**
      * @return logFoodPane
      */
-    public BorderPane getLogFoodPane() {
+    public GridPane getLogFoodPane() {
         return logFoodPane;
     }
 

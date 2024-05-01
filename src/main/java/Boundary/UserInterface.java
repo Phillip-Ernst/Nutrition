@@ -5,6 +5,7 @@ import Entity.Food;
 import Entity.User;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.chart.PieChart;
 import javafx.scene.control.Button;
@@ -35,11 +36,12 @@ public class UserInterface extends Application {
     private static Button graphSettingBtn;
     private static User currentUser;
     private static GenerateGraph generateGraph;
+    private static GenerateReport generateReport;
     @Override
     public void start(Stage stage) throws ClassNotFoundException {
         SignIn signIn = new SignIn();
         LogFood logFood = new LogFood();
-        GenerateReport generateReport = new GenerateReport();
+        generateReport = new GenerateReport();
         generateGraph = new GenerateGraph();
         currentUser = new User("Empty");
 
@@ -64,14 +66,10 @@ public class UserInterface extends Application {
             scene.setRoot(logFood.getLogFoodPane());
         });
 
-        //re-sets graph and report then sets the root to menuPane when backBtn in logFoodPane is clicked
+        //update graph and report then sets the root to menuPane when backBtn in logFoodPane is clicked
         logFood.getBackBtn().setOnAction(e -> {
-            //Re-set graph
             updateGraph("Grams    ", "Daily     ");
-
-            //Re-set report
-            generateReport.createReport(currentUser.getDailyIntake(), currentUser.getWeeklyIntake());
-            generateReport.loadReport();
+            updateReport();
 
             scene.setRoot(menuPane);
         });
@@ -112,6 +110,8 @@ public class UserInterface extends Application {
         //Create and add modules to menuPane
         menuPane = new BorderPane();
         HBox bottomPane = new HBox();
+        bottomPane.setAlignment(Pos.CENTER);
+        bottomPane.setSpacing(150);
         signOutBtn = new Button("Sign Out");
         logFoodBtn = new Button("Log Food");
         reportBtn = new Button("Generate Report");
@@ -129,9 +129,14 @@ public class UserInterface extends Application {
     public void switchMenuPane(User user) {
         currentUser = user;
         updateGraph("Grams    ","Daily     ");
+        updateReport();
         scene.setRoot(menuPane);
     }
 
+    public void updateReport() {
+        generateReport.createReport(currentUser.getDailyIntake(), currentUser.getWeeklyIntake());
+        generateReport.loadReport();
+    }
     /**
      * Updates pie graph when called.
      * @param gramOrCal String that lets the method know to make the graph in grams or calories (string should either be gram or calorie)
