@@ -74,7 +74,7 @@ public class FoodDatabaseManagement {
                     //Checks if food is from today
                     if(foodDate.isEqual(currentDate)) {
                         user.addDailyIntake(food);
-                        user.addWeeklyIntake(food);
+
                     }
                     //Checks if foodDate falls within the current week
                     if(foodDate.isEqual(startOfWeek) || (foodDate.isAfter(startOfWeek) && foodDate.isBefore(endOfWeek))) {
@@ -146,7 +146,8 @@ public class FoodDatabaseManagement {
                             Double.parseDouble(foodInfo[3].trim()), Double.parseDouble(foodInfo[4].trim()));
                 }
             }
-        } catch (IOException e) {
+        }
+        catch (IOException e) {
             e.printStackTrace();
         }
         return new Food("<Error>",0,0,0,0);

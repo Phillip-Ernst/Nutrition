@@ -1,6 +1,7 @@
 package Boundary;
 
 import Control.CalculateCalories;
+import Entity.Food;
 import Entity.User;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -35,9 +36,10 @@ public class UserInterface extends Application {
     private static User currentUser;
     private static GenerateGraph generateGraph;
     @Override
-    public void start(Stage stage) throws IOException, ClassNotFoundException {
+    public void start(Stage stage) throws ClassNotFoundException {
         SignIn signIn = new SignIn();
         LogFood logFood = new LogFood();
+        GenerateReport generateReport = new GenerateReport();
         generateGraph = new GenerateGraph();
         currentUser = new User("Empty");
 
@@ -62,9 +64,15 @@ public class UserInterface extends Application {
             scene.setRoot(logFood.getLogFoodPane());
         });
 
-        //Sets the root to menuPane when backBtn in logFoodPane is clicked
+        //re-sets graph and report then sets the root to menuPane when backBtn in logFoodPane is clicked
         logFood.getBackBtn().setOnAction(e -> {
+            //Re-set graph
             updateGraph("Grams    ", "Daily     ");
+
+            //Re-set report
+            generateReport.createReport(currentUser.getDailyIntake(), currentUser.getWeeklyIntake());
+            generateReport.loadReport();
+
             scene.setRoot(menuPane);
         });
 
@@ -87,7 +95,17 @@ public class UserInterface extends Application {
             generateGraph.getPopUpStage().close();
         });
 
+        //Creates report then sets the root to reportPane when reportBtn is clicked
+        reportBtn.setOnAction(e -> {
+            generateReport.createReport(currentUser.getDailyIntake(), currentUser.getWeeklyIntake());
+            scene.setRoot(generateReport.getReportPane());
 
+        });
+
+        //Sets the root to menuPane when backBtn in reportPane is clicked
+        generateReport.getBackBtn().setOnAction(e -> {
+            scene.setRoot(menuPane);
+        });
     }
 
     public UserInterface() {
@@ -98,7 +116,6 @@ public class UserInterface extends Application {
         logFoodBtn = new Button("Log Food");
         reportBtn = new Button("Generate Report");
         graphSettingBtn = new Button("Graph Settings");
-        Label calorieTotal = new Label("Total: Calories");
         bottomPane.getChildren().addAll(logFoodBtn, reportBtn);
         menuPane.setLeft(signOutBtn);
         menuPane.setRight(graphSettingBtn);
