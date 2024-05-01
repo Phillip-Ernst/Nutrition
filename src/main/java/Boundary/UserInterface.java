@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.chart.PieChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.Tooltip;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
@@ -30,11 +31,13 @@ public class UserInterface extends Application {
     private static Button signOutBtn;
     private static Button logFoodBtn;
     private static Button reportBtn;
+    private static Button graphSettingBtn;
     private static User currentUser;
     @Override
     public void start(Stage stage) throws IOException, ClassNotFoundException {
         SignIn signIn = new SignIn();
         LogFood logFood = new LogFood();
+        GenerateGraph generateGraph = new GenerateGraph();
         currentUser = new User("Empty");
 
         //Initially set pane to signInPane
@@ -70,19 +73,34 @@ public class UserInterface extends Application {
             scene.setRoot(signIn.getSignInPane());
         });
 
+        //Creates a popup window from GenerateGraph to change graph settings
+        graphSettingBtn.setOnAction(e -> {
+            generateGraph.getPopUpStage().show();
+        });
+
+        //updates pie chart with new settings the closes the popup window after saveBtn in popup window is pressed
+        generateGraph.getSaveBtn().setOnAction(e -> {
+            String gramOrCal = ((RadioButton) generateGraph.getGramOrCal().getSelectedToggle()).getText();
+            String dailyOrWeekly = ((RadioButton) generateGraph.getDailyOrWeekly().getSelectedToggle()).getText();
+            updateGraph(gramOrCal, dailyOrWeekly);
+            generateGraph.getPopUpStage().close();
+        });
+
 
     }
 
-    public UserInterface() throws ClassNotFoundException {
+    public UserInterface() {
         //Create and add modules to menuPane
         menuPane = new BorderPane();
         HBox bottomPane = new HBox();
         signOutBtn = new Button("Sign Out");
         logFoodBtn = new Button("Log Food");
         reportBtn = new Button("Generate Report");
+        graphSettingBtn = new Button("Graph Settings");
         Label calorieTotal = new Label("Total: Calories");
         bottomPane.getChildren().addAll(logFoodBtn, reportBtn);
-        menuPane.setTop(signOutBtn);
+        menuPane.setLeft(signOutBtn);
+        menuPane.setRight(graphSettingBtn);
         menuPane.setBottom(bottomPane);
     }
 
@@ -120,8 +138,8 @@ public class UserInterface extends Application {
         weeklyMacroCals = calculateCalories.calculateTotalMacronutrientCals(currentUser.getWeeklyIntake());
 
         //Create graph with eiter weekly or daily and with either Calories or Grams data then add the graph to the menuPane
-        if(gramOrCal.equals("gram")) {
-            if(dailyOrWeekly.equals("daily")) {
+        if(gramOrCal.equals("Grams    ")) {
+            if(dailyOrWeekly.equals("Daily     ")) {
                 PieChart pieChart = generateGraph.generateGraphInGrams(dailyMacroGrams.get(0), dailyMacroGrams.get(1), dailyMacroGrams.get(2));
                 pieChart.getData().forEach(data -> {
                     String label = (data.getPieValue() + " grams");
@@ -132,16 +150,31 @@ public class UserInterface extends Application {
             }
             else {
                 PieChart pieChart = generateGraph.generateGraphInGrams(weeklyMacroGrams.get(0), weeklyMacroGrams.get(1), weeklyMacroGrams.get(2));
+                pieChart.getData().forEach(data -> {
+                    String label = (data.getPieValue() + " grams");
+                    Tooltip toolTip = new Tooltip(label);
+                    Tooltip.install(data.getNode(), toolTip);
+                });
                 menuPane.setCenter(pieChart);
             }
         }
         else {
-            if (dailyOrWeekly.equals("daily")) {
+            if (dailyOrWeekly.equals("Daily     ")) {
                 PieChart pieChart = generateGraph.generateGraphInCalories(dailyMacroCals.get(0), dailyMacroCals.get(1), dailyMacroCals.get(2));
+                pieChart.getData().forEach(data -> {
+                    String label = (data.getPieValue() + " calories");
+                    Tooltip toolTip = new Tooltip(label);
+                    Tooltip.install(data.getNode(), toolTip);
+                });
                 menuPane.setCenter(pieChart);
             }
             else {
                 PieChart pieChart = generateGraph.generateGraphInCalories(weeklyMacroCals.get(0), weeklyMacroCals.get(1), weeklyMacroCals.get(2));
+                pieChart.getData().forEach(data -> {
+                    String label = (data.getPieValue() + " calories");
+                    Tooltip toolTip = new Tooltip(label);
+                    Tooltip.install(data.getNode(), toolTip);
+                });
                 menuPane.setCenter(pieChart);
             }
         }

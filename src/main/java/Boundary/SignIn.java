@@ -9,6 +9,7 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
@@ -48,7 +49,7 @@ public class SignIn {
 
         //Create sign in fields and buttons and add them to SignInPane
         TextField usrNameField = new TextField();
-        TextField passwdField = new TextField();
+        PasswordField passwdField = new PasswordField();
         Button signInBtn = new Button("Sign In");
         addUserBtn = new Button("Create New User");
         Label status = new Label("Enter your username and password above");
@@ -64,8 +65,8 @@ public class SignIn {
 
         //Create add user fields and buttons and add them to addUserPane
         TextField addUsrNamefield = new TextField();
-        TextField addPasswdField = new TextField();
-        TextField passwdConfirmation = new TextField();
+        PasswordField addPasswdField = new PasswordField();
+        PasswordField passwdConfirmation = new PasswordField();
         Button createUserBtn = new Button("Create User");
         backBtn = new Button("Back to Sign in Page");
         Label status2 = new Label("Enter your username and password above");
