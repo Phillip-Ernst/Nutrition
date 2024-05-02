@@ -1,12 +1,10 @@
 package Control;
 
 import Entity.Food;
-
 import java.util.ArrayList;
 
 /**
  * @author Isaac Hotop
- *
  * This class calculates the total calories, fats, carbohydrates, and proteins that the user has consumed
  * by adding up the user's food intake
  */

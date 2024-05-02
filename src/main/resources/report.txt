@@ -1,1 +1,46 @@
 ==========================================================================
+                        Daily Food Intake Report                          
+--------------------------------Food--------------------------------------
+
+------------------------------Daily Totals---------------------------------
+Calories: 0	 Protein: 0.0	 Carbohydrates: 0.0	 Fats: 0.0
+
+
+==========================================================================
+                       Weekly Food Intake Report                          
+--------------------------------Food--------------------------------------
+Name: Banana	 Calories: 89	 Protein: 1.1	 Carbohydrates: 23.0	 Fats: 0.3
+Name: Cashews	 Calories: 450	 Protein: 6.0	 Carbohydrates: 44.0	 Fats: 0.0
+Name: Banana	 Calories: 89	 Protein: 1.1	 Carbohydrates: 23.0	 Fats: 0.3
+Name: Banana	 Calories: 89	 Protein: 1.1	 Carbohydrates: 23.0	 Fats: 0.3
+Name: Banana	 Calories: 89	 Protein: 1.1	 Carbohydrates: 23.0	 Fats: 0.3
+Name: Banana	 Calories: 89	 Protein: 1.1	 Carbohydrates: 23.0	 Fats: 0.3
+Name: Banana	 Calories: 89	 Protein: 1.1	 Carbohydrates: 23.0	 Fats: 0.3
+Name: Banana	 Calories: 89	 Protein: 1.1	 Carbohydrates: 23.0	 Fats: 0.3
+Name: Banana	 Calories: 89	 Protein: 1.1	 Carbohydrates: 23.0	 Fats: 0.3
+Name: Cod (cooked)	 Calories: 588	 Protein: 25.0	 Carbohydrates: 20.0	 Fats: 50.0
+Name: Cod (cooked)	 Calories: 588	 Protein: 25.0	 Carbohydrates: 20.0	 Fats: 50.0
+Name: Cod (cooked)	 Calories: 588	 Protein: 25.0	 Carbohydrates: 20.0	 Fats: 50.0
+Name: Cod (cooked)	 Calories: 588	 Protein: 25.0	 Carbohydrates: 20.0	 Fats: 50.0
+Name: Cod (cooked)	 Calories: 588	 Protein: 25.0	 Carbohydrates: 20.0	 Fats: 50.0
+Name: Cod (cooked)	 Calories: 588	 Protein: 25.0	 Carbohydrates: 20.0	 Fats: 50.0
+Name: Cod (cooked)	 Calories: 588	 Protein: 25.0	 Carbohydrates: 20.0	 Fats: 50.0
+Name: Cod (cooked)	 Calories: 588	 Protein: 25.0	 Carbohydrates: 20.0	 Fats: 50.0
+Name: Cod (cooked)	 Calories: 588	 Protein: 25.0	 Carbohydrates: 20.0	 Fats: 50.0
+Name: Cod (cooked)	 Calories: 588	 Protein: 25.0	 Carbohydrates: 20.0	 Fats: 50.0
+Name: Cod (cooked)	 Calories: 588	 Protein: 25.0	 Carbohydrates: 20.0	 Fats: 50.0
+Name: Cod (cooked)	 Calories: 588	 Protein: 25.0	 Carbohydrates: 20.0	 Fats: 50.0
+Name: Banana	 Calories: 89	 Protein: 1.1	 Carbohydrates: 23.0	 Fats: 0.3
+Name: Avocado	 Calories: 160	 Protein: 2.0	 Carbohydrates: 9.0	 Fats: 15.0
+Name: Avocado	 Calories: 160	 Protein: 2.0	 Carbohydrates: 9.0	 Fats: 15.0
+Name: Cashews	 Calories: 450	 Protein: 6.0	 Carbohydrates: 44.0	 Fats: 0.0
+Name: Banana	 Calories: 89	 Protein: 1.1	 Carbohydrates: 23.0	 Fats: 0.3
+Name: Banana	 Calories: 89	 Protein: 1.1	 Carbohydrates: 23.0	 Fats: 0.3
+Name: Cashews	 Calories: 450	 Protein: 6.0	 Carbohydrates: 44.0	 Fats: 0.0
+Name: Cod (cooked)	 Calories: 588	 Protein: 25.0	 Carbohydrates: 20.0	 Fats: 50.0
+Name: Pralines	 Calories: 370	 Protein: 13.8	 Carbohydrates: 40.2	 Fats: 1.0
+Name: Cashews	 Calories: 450	 Protein: 6.0	 Carbohydrates: 44.0	 Fats: 0.0
+Name: Cod (cooked)	 Calories: 588	 Protein: 25.0	 Carbohydrates: 20.0	 Fats: 50.0
+
+-----------------------------Weekly Totals---------------------------------
+Calories: 11701	 Protein: 403.9000000000001	 Carbohydrates: 767.2	 Fats: 734.2999999999998

@@ -18,8 +18,8 @@ import java.util.ArrayList;
  * This class generates a report that users can view that displays their food, calorie, fat, carbohydrate, and protein intake
  */
 public class GenerateReport {
-    private Button backBtn;
-    private ScrollPane reportPane;
+    private final Button backBtn;
+    private final ScrollPane reportPane;
     private static Text report;
     public GenerateReport() {
         //Create and add modules to reportPane
@@ -104,8 +104,7 @@ public class GenerateReport {
     }
 
     /**
-     * Converts report.txt into a string
-     * @return report.txt as a string
+     * Converts report.txt into Text
      */
     public void loadReport() {
         StringBuilder content = new StringBuilder();

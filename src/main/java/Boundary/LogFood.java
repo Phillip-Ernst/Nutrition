@@ -2,14 +2,11 @@ package Boundary;
 
 import Control.InputValidation;
 import Entity.Food;
-import javafx.geometry.VPos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
-
 import java.time.LocalDate;
 
 /**
@@ -18,8 +15,8 @@ import java.time.LocalDate;
  * This class alows the user to input their food intake
  */
 public class LogFood {
-    private GridPane logFoodPane;
-    private Button backBtn;
+    private final GridPane logFoodPane;
+    private final Button backBtn;
 
     public LogFood() throws ClassNotFoundException {
         FoodDatabaseManagement foodDatabaseManagement = new FoodDatabaseManagement();

@@ -1,21 +1,15 @@
 package Boundary;
 
 import Control.InputValidation;
-import Entity.Food;
 import Entity.User;
-import javafx.application.Application;
 import javafx.geometry.HPos;
 import javafx.geometry.Pos;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
-
-import java.io.IOException;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 /**
@@ -24,10 +18,10 @@ import java.sql.SQLException;
  * This class alows the user to securely sign in, sign out, or sign up to access or create their account
  */
 public class SignIn {
-    private GridPane signInPane;
-    private GridPane addUserPane;
-   private Button addUserBtn;
-    private Button backBtn;
+    private final GridPane signInPane;
+    private final GridPane addUserPane;
+   private final Button addUserBtn;
+    private final Button backBtn;
     public SignIn() throws ClassNotFoundException {
         InputValidation inputValidation = new InputValidation();
         FoodDatabaseManagement foodDatabaseManagement = new FoodDatabaseManagement();
@@ -59,9 +53,9 @@ public class SignIn {
         signInPane.add(signInBtn, 0, 1);
         signInPane.add(addUserBtn, 0,2);
         signInPane.add(status, 0, 3);
-        signInPane.setHalignment(signInBtn, HPos.CENTER);
-        signInPane.setHalignment(addUserBtn, HPos.CENTER);
-        signInPane.setHalignment(status, HPos.CENTER);
+        GridPane.setHalignment(signInBtn, HPos.CENTER);
+        GridPane.setHalignment(addUserBtn, HPos.CENTER);
+        GridPane.setHalignment(status, HPos.CENTER);
 
         //Create add user fields and buttons and add them to addUserPane
         TextField addUsrNamefield = new TextField();

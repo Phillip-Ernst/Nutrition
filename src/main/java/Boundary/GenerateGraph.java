@@ -1,10 +1,7 @@
 package Boundary;
 
-import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.geometry.HPos;
-import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.chart.PieChart;
@@ -14,7 +11,6 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -29,10 +25,6 @@ public class GenerateGraph {
     private static Stage popUpStage;
     private static ToggleGroup gramOrCal;
     private static ToggleGroup dailyOrWeekly;
-    private  RadioButton gramRadio;
-    private  RadioButton calRadio;
-    private  RadioButton dailyRadio;
-    private  RadioButton weeklyRadio;
     private static Button saveBtn;
 
     public GenerateGraph() {
@@ -52,13 +44,13 @@ public class GenerateGraph {
         gramOrCal = new ToggleGroup();
         dailyOrWeekly = new ToggleGroup();
 
-        gramRadio = new RadioButton("Grams    ");
+        RadioButton gramRadio = new RadioButton("Grams    ");
         gramRadio.setToggleGroup(gramOrCal);
-        calRadio = new RadioButton("Calories");
+        RadioButton calRadio = new RadioButton("Calories");
         calRadio.setToggleGroup(gramOrCal);
-        dailyRadio = new RadioButton("Daily     ");
+        RadioButton dailyRadio = new RadioButton("Daily     ");
         dailyRadio.setToggleGroup(dailyOrWeekly);
-        weeklyRadio = new RadioButton("Weekly ");
+        RadioButton weeklyRadio = new RadioButton("Weekly ");
         weeklyRadio.setToggleGroup(dailyOrWeekly);
 
         //Populate popUpLayout with nodes and create scene then set it to popUpStage

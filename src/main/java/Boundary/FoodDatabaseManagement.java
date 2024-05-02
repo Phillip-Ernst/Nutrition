@@ -2,7 +2,6 @@ package Boundary;
 
 import Entity.Food;
 import Entity.User;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -44,7 +43,7 @@ public class FoodDatabaseManagement {
      * @param username The user's username
      * @param password The user's password
      * @return User object
-     * @throws SQLException
+     * @throws SQLException SQLException
      */
     public User signInUser(String username, String password) throws SQLException {
         try {
